@@ -19,15 +19,16 @@ var imagenes = [
 ];
 
 // 1 cambiar imagen al dado 1(valorDado1 + valorDado2) + 2; //
+var valorDado1 = tiraDado();
+var valorDado2 = tiraDado();
+
 document.querySelector(".img1").src = imagenes[valorDado1];
 document.querySelector(".img2").src = imagenes[valorDado2];
 
 // Imprimir ganador
 
-if (valorDado1 > valorDado2) {
-    document.querySelector("h1").textContent = "Player 1 WINS!";
-} else if (valorDado1 < valorDado2) {
-    document.querySelector("h1").textContent = "Player 2 WINS!";
+if (valorDado1 === valorDado2) {
+    document.querySelector("h1").textContent = ( valorDado1 + valorDado2 + 2 ) + " DOBLES!";
 } else {
-    document.querySelector("h1").textContent = "It's a TIE!";
+    document.querySelector("h1").textContent = ( valorDado1 + valorDado2 + 2 );
 }
